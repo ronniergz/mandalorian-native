@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, Button, View } from 'react-native';
+import { Image, Text, Button, View, ScrollView } from 'react-native';
 
 class Home extends Component {
 
@@ -10,13 +10,23 @@ class Home extends Component {
     render() {
         const { navigate } = this.props.navigation;
         return (
-          <View>
-            <Text> Home Page </Text>
+          <ScrollView>
+            <View style={{ flexDirection: 'column', height: 200, padding: 10}}>
+              <Image 
+              source={require('../assets/images/logo.jpg')}
+              style={{
+                flex: 1,
+                width: null,
+                height: null,
+                resizeMode: 'contain'
+              }} 
+              />
+            </View>
             <Button 
               title="Episodes"
-              onPress={() => navigate('Episodes')} 
+              onPress={() => navigate('EpisodeGuide')} 
             />
-          </View>
+          </ScrollView>
           
         );
     }

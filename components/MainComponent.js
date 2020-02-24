@@ -1,17 +1,19 @@
 import React, { Component } from 'react';
 import { Text, Button, View } from 'react-native';
-import { createStackNavigator } from 'react-navigation';
+import { createDrawerNavigator } from 'react-navigation';
 import Home from './HomeComponent';
 import Episodes from './EpisodesComponent';
 
 
-const Stack = createStackNavigator(
+
+
+const Drawer = createDrawerNavigator(
   {
     Home: { screen: Home},
     EpisodeGuide: { screen: Episodes}
   },
   {
-    initialRouteName: 'EpisodeGuide'
+    initialRouteName: 'Home'
   }
 );
 
@@ -19,11 +21,10 @@ class Main extends Component {
 
   render() {
     return(
-      <View>
-        <Stack />
-      </View>
+      <Drawer />
     );
   }
 }
 
-export default Main; 
+export default Main;
+

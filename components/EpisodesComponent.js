@@ -12,6 +12,9 @@ class Episodes extends Component {
         return (
           <View>
             <Text> Episodes Page </Text>
+            <Text>
+              This is where the episodes will go
+            </Text>
             <Button 
               title="Home"
               onPress={() => navigate('Home')} 
