@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { Text, Button, View } from 'react-native';
 
-class Episodes extends Component {
+class Characters extends Component {
 
     static navigationOptions = {
-        title: 'Episodes'
+        title: 'Characters'
     };
 
     render() {
@@ -12,9 +12,9 @@ class Episodes extends Component {
         return (
           <View>
             <View style={{ height: 25 }} />
-            <Text> Episodes Page </Text>
+            <Text> Characters Page </Text>
             <Text>
-              This is where the episodes will go
+              This is where the Characters will go
             </Text>
           </View>
           
@@ -22,4 +22,4 @@ class Episodes extends Component {
     }
 }
 
-export default Episodes;
+export default Characters;

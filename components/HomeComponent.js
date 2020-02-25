@@ -11,7 +11,8 @@ class Home extends Component {
         const { navigate } = this.props.navigation;
         return (
           <ScrollView>
-            <View style={{ flexDirection: 'column', height: 200, padding: 10}}>
+            <View style={{ height: 15 }} />
+            <View style={{ flexDirection: 'column', height: 125 }}>
               <Image 
               source={require('../assets/images/logo.jpg')}
               style={{
@@ -22,10 +23,17 @@ class Home extends Component {
               }} 
               />
             </View>
-            <Button 
-              title="Episodes"
-              onPress={() => navigate('EpisodeGuide')} 
-            />
+            <View style={{ flexDirection: 'column', height: 300, padding: 0}}>
+              <Image 
+              source={require('../assets/images/homeBackground.jpg')}
+              style={{
+                flex: 1,
+                width: null,
+                height: null,
+                resizeMode: 'contain'
+              }} 
+              />
+            </View>
           </ScrollView>
           
         );
