@@ -5,16 +5,51 @@ import Home from './HomeComponent';
 import Episodes from './EpisodesComponent';
 import Characters from './CharactersComponent';
 import Puzzle from './PuzzleComponent';
-
-
+import { Icon } from  'react-native-elements';
 
 
 const BottomTab = createBottomTabNavigator(
   {
-    Home: { screen: Home},
-    EpisodeGuide: { screen: Episodes},
-    CharacterGuide: { screen: Characters},
-    Puzzle: { screen: Puzzle}
+    Home: { 
+      screen: Home,
+      navigationOptions: {
+        tabBarIcon: <Icon
+            name='home'
+            type='font-awesome'
+            color='#848484'
+        />
+      }
+    },
+    EpisodeGuide: { 
+      screen: Episodes,
+      navigationOptions: {
+        tabBarIcon: <Icon
+            name='list-alt'
+            type='font-awesome'
+            color='#848484'
+        />
+      }
+    },
+    CharacterGuide: { 
+      screen: Characters,
+      navigationOptions: {
+        tabBarIcon: <Icon
+            name='address-card'
+            type='font-awesome'
+            color='#848484'
+        />
+      }
+    },
+    Puzzle: { 
+      screen: Puzzle,
+      navigationOptions: {
+        tabBarIcon: <Icon
+            name='puzzle-piece'
+            type='font-awesome'
+            color='#848484'
+        />
+      }
+    }
   },
   {
     initialRouteName: 'Home'
