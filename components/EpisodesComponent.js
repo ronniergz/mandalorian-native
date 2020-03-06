@@ -12,7 +12,7 @@ class Episodes extends Component {
   }
   
   render() {
-    
+    const { navigate } = this.props.navigation;
     const renderEpisode = ({item}) => {
       return (
       <View style={styles.episodeListItem}>
@@ -33,7 +33,7 @@ class Episodes extends Component {
           <Text> {item.sum_short} </Text>
           <Text style={{paddingTop: 10}}> Director: {item.director} </Text>
           <Text> Writer: {item.writer} </Text>
-          <Button title="More Info" onPress={() => navigate('EpisodeInfo')} ></Button>
+          <Button title="More Info" onPress={() => navigate('EpisodeInfo', { episodeId: item.id })} ></Button>
         </View>        
       </View>  
       );
@@ -41,7 +41,7 @@ class Episodes extends Component {
 
     return (
         <View>
-          <View style={{ height: 25 }} />
+          <View style={{ height: 15 }} />
           <View style ={{ justifyContent: 'center', flexDirection: 'column' }} >
             <Text style={{ textAlign: 'center', fontSize: 25 }}> Season 1 </Text>
           </View>

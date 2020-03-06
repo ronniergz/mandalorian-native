@@ -3,11 +3,11 @@ import { Text, Button, View } from 'react-native';
 import { createBottomTabNavigator } from 'react-navigation';
 import Home from './HomeComponent';
 import Episodes from './EpisodesComponent';
+import EpisodeInfo from './EpisodeInfoComponent';
 import Characters from './CharactersComponent';
 import Puzzle from './PuzzleComponent';
 import { Icon } from  'react-native-elements';
 import createStackNavigator from 'react-navigation/src/navigators/createStackNavigator';
-import { EpisodeInfo } from './EpisodeInfoComponent';
 
 const EpisodesNavigator = createStackNavigator(
   {
