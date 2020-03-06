@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import { Text, Image, View, FlatList, StyleSheet } from 'react-native';
+import { Text, Image, Button, ScrollView, View, FlatList, StyleSheet } from 'react-native';
 import { EPISODES } from '../shared/Episodes.js';
-import { Card } from 'react-native-elements';
 import { baseUrl } from '../shared/baseUrl.js';
 
 class Episodes extends Component {
@@ -16,7 +15,6 @@ class Episodes extends Component {
     
     const renderEpisode = ({item}) => {
       return (
-
       <View style={styles.episodeListItem}>
         <View style={{ width: 100, overflow: 'hidden' }} >
           <Image
@@ -35,6 +33,7 @@ class Episodes extends Component {
           <Text> {item.sum_short} </Text>
           <Text style={{paddingTop: 10}}> Director: {item.director} </Text>
           <Text> Writer: {item.writer} </Text>
+          <Button title="More Info" onPress={() => navigate('EpisodeInfo')} ></Button>
         </View>        
       </View>  
       );

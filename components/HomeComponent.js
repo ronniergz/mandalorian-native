@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Image, Text, Button, StyleSheet,View, ScrollView } from 'react-native';
 import { WebView } from 'react-native-webview';
+
+
 class Home extends Component {
 
     static navigationOptions = {

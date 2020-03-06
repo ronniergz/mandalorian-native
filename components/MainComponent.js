@@ -6,6 +6,16 @@ import Episodes from './EpisodesComponent';
 import Characters from './CharactersComponent';
 import Puzzle from './PuzzleComponent';
 import { Icon } from  'react-native-elements';
+import createStackNavigator from 'react-navigation/src/navigators/createStackNavigator';
+import { EpisodeInfo } from './EpisodeInfoComponent';
+
+const EpisodesNavigator = createStackNavigator(
+  {
+  Episodes: {screen: Episodes},
+  EpisodeInfo: {screen: EpisodeInfo}
+  },
+  { initialRouteName: 'Episodes'}
+); 
 
 
 const BottomTab = createBottomTabNavigator(
@@ -21,7 +31,7 @@ const BottomTab = createBottomTabNavigator(
       }
     },
     EpisodeGuide: { 
-      screen: Episodes,
+      screen: EpisodesNavigator,
       navigationOptions: {
         tabBarIcon: <Icon
             name='list-alt'
