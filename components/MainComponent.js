@@ -14,7 +14,11 @@ const EpisodesNavigator = createStackNavigator(
   Episodes: {screen: Episodes},
   EpisodeInfo: {screen: EpisodeInfo}
   },
-  { initialRouteName: 'Episodes'}
+  { initialRouteName: 'Episodes',
+    screenOptions: {
+      headerShown: false
+    }
+  }
 ); 
 
 

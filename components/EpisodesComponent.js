@@ -16,7 +16,7 @@ class Episodes extends Component {
     const renderEpisode = ({item}) => {
       return (
       <View style={styles.episodeListItem}>
-        <View style={{ width: 100, overflow: 'hidden' }} >
+        <View style={{ width: 118 }} >
           <Image
             source={{uri: baseUrl + item.imagescn}}
             style={{ flex: 1, width: undefined, height: undefined}}
@@ -33,7 +33,9 @@ class Episodes extends Component {
           <Text> {item.sum_short} </Text>
           <Text style={{paddingTop: 10}}> Director: {item.director} </Text>
           <Text> Writer: {item.writer} </Text>
-          <Button title="More Info" onPress={() => navigate('EpisodeInfo', { episodeId: item.id })} ></Button>
+          <View style={{ flexDirection: 'row', justifyContent: 'space-between'}}>
+            <Button title="More Info" onPress={() => navigate('EpisodeInfo', { episodeId: item.id })} ></Button>
+          </View>  
         </View>        
       </View>  
       );
@@ -41,10 +43,6 @@ class Episodes extends Component {
 
     return (
         <View>
-          <View style={{ height: 15 }} />
-          <View style ={{ justifyContent: 'center', flexDirection: 'column' }} >
-            <Text style={{ textAlign: 'center', fontSize: 25 }}> Season 1 </Text>
-          </View>
           <FlatList
             data={this.state.episodes}
             renderItem={renderEpisode}
@@ -65,11 +63,12 @@ const styles = StyleSheet.create({
 episodeListItem: {
   flex: 1,
   flexDirection: "row",
-  height: 150,
+  height: 175,
   margin: 10,
   borderColor: "black",
   borderWidth: 1,
-  borderRadius: 10
+  borderRadius: 10,
+  overflow: 'hidden'
 }
 
 
