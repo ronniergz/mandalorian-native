@@ -11,6 +11,10 @@ class Episodes extends Component {
     };
   }
   
+  static navigationOptions = {
+    title: "Episode Guide"
+  };
+
   render() {
     const { navigate } = this.props.navigation;
     const renderEpisode = ({item}) => {
@@ -65,7 +69,7 @@ episodeListItem: {
   flexDirection: "row",
   height: 175,
   margin: 10,
-  borderColor: "black",
+  borderColor: "gray",
   borderWidth: 1,
   borderRadius: 10,
   overflow: 'hidden'

@@ -11,7 +11,7 @@ class EpisodeInfo extends Component {
     };
   }
   static navigationOptions = {
-    title: 'Episode Guide'
+    title: 'Episode Info'
   };
 
   render() {
